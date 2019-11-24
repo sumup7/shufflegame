@@ -1,0 +1,48 @@
+body {
+  background-color: #f2f5ea;
+  font-size: 22px;
+  font-family: Verdana, sans-serif;
+  width: 500px;
+  margin-right: auto;
+  margin-left : auto;
+}
+#resultarea {
+  position: relative;
+  background-color: #bbc7a4;
+  height: 250px;
+  width: 500px;
+  text-align: center;
+}
+#resultarea > h1 {
+  position: absolute;
+  font-size: 50px;
+  color: #e75a7c;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#instructionsarea {
+  position: relative;
+  background-color: black;
+  height: 150px;
+  width: 500;
+  text-align: center;
+}
+#instructionsarea > span {
+  position: absolute;
+  font-size: 26px;
+  color: white;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+button {
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #d6dbd2;
+  border-style: none;
+}  
