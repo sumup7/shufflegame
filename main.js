@@ -10,7 +10,8 @@ const answerButton = document.getElementById('answer');
 const nextButton = document.getElementById('next');
 const resetButton = document.getElementById('reset');
 const resultarea = document.querySelector('#resultarea > h1');
-const instructionarea = document.querySelector('#instructionsarea > span');
+const instructionareaMessage = document.querySelector('#instructionsarea > span');
+const instructionarea = document.getElementById('instructionsarea');
 const meseage1 = document.getElementById('meseage1');
 const meseage2 = document.getElementById('meseage2');
 const body = document.body;
@@ -31,12 +32,19 @@ function rotateHeader() {
 }
 setInterval(rotateHeader, 150);
 
-function changeColor(){
+function changeColor1(){
   body.className = 'off';
   meseage1.className ='meseageWhite';
   meseage2.className ='meseageWhite';
   instructionarea.className = 'instructionsareaWhite';
-  instructionarea = 'instructionsareMesageOff';
+  instructionareaMessage.className = 'instructionsareMesageOff';
+}
+function changeColor2(){
+  body.className = 'on';
+  meseage1.className ='meseageBlack';
+  meseage2.className ='meseageBlack';
+  instructionarea.className = 'instructionsareaBlack';
+  instructionareaMessage.className = 'instructionsareMesageOn';
 }
 let blackOrWhite = ["黒","白","黒","白","黒"];
 const instruction = [
@@ -46,36 +54,42 @@ const instruction = [
 ];
 window.onload = ()　=> {
   resultarea.textContent = blackOrWhite;
-  instructionarea.textContent = instruction[0];
+  instructionareaMessage.textContent = instruction[0];
 };
 selectButton1.onclick = () => {
  result = blackOrWhite.unshift('黒');
  resultarea.textContent = blackOrWhite;
- changeColor();
+ changeColor1();
 };
 selectButton2.onclick = () => {
   blackOrWhite.unshift('白');
  resultarea.textContent = blackOrWhite;
+ changeColor2();
 };
 selectButton3.onclick = () => {
   blackOrWhite.push('黒');
  resultarea.textContent = blackOrWhite;
+ changeColor1();
 };
 selectButton4.onclick = () => {
   blackOrWhite.push('白');
  resultarea.textContent = blackOrWhite;
+ changeColor2();
 };
 selectButton5.onclick = () => {
   blackOrWhite.shift();
  resultarea.textContent = blackOrWhite;
+ changeColor1();
 };
 selectButton6.onclick = () => {
   blackOrWhite.pop();
  resultarea.textContent = blackOrWhite;
+ changeColor2();
 };
 selectButton7.onclick = () => {
  blackOrWhite.reverse();
  resultarea.textContent = blackOrWhite;
+ changeColor1();
 };
 resetButton.onclick = () => {
   location.reload();
