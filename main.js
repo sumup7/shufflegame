@@ -11,10 +11,33 @@ const nextButton = document.getElementById('next');
 const resetButton = document.getElementById('reset');
 const resultarea = document.querySelector('#resultarea > h1');
 const instructionarea = document.querySelector('#instructionsarea > span');
+const meseage1 = document.getElementById('meseage1');
+const meseage2 = document.getElementById('meseage2');
+const body = document.body;
 let result;
 let count = 0;
 let answer;
+let degree = 0;
 
+function rotateHeader() {
+  degree = degree + 6;
+  degree = degree % 360;
+  if ((0 <= degree && degree < 90) || (270 <= degree && degree < 360)) {
+    resultarea.className = 'face';
+  } else {
+    resultarea.className = 'back';
+  }
+  resultarea.style.transform = 'rotateY(' + degree +  'deg)';
+}
+setInterval(rotateHeader, 150);
+
+function changeColor(){
+  body.className = 'off';
+  meseage1.className ='meseageWhite';
+  meseage2.className ='meseageWhite';
+  instructionarea.className = 'instructionsareaWhite';
+  instructionarea = 'instructionsareMesageOff';
+}
 let blackOrWhite = ["黒","白","黒","白","黒"];
 const instruction = [
   "指示１　白を一つ足して、黒,白,黒,白,黒,白に並ばせなさい！",
@@ -28,6 +51,7 @@ window.onload = ()　=> {
 selectButton1.onclick = () => {
  result = blackOrWhite.unshift('黒');
  resultarea.textContent = blackOrWhite;
+ changeColor();
 };
 selectButton2.onclick = () => {
   blackOrWhite.unshift('白');

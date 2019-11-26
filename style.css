@@ -1,14 +1,27 @@
 body {
-  background-color: #f2f5ea;
+  background-color: white;
   font-size: 22px;
   font-family: Verdana, sans-serif;
   width: 500px;
   margin-right: auto;
   margin-left : auto;
 }
+
+.on {
+  background-color: white;
+}
+.off{
+  background-color: black;
+}
+.meseageBlack{
+  color: black;
+}
+.meseageWhite{
+  color: white;
+}
 #resultarea {
   position: relative;
-  background-color: #bbc7a4;
+  background-color: gray;
   height: 250px;
   width: 500px;
   text-align: center;
@@ -16,15 +29,26 @@ body {
 #resultarea > h1 {
   position: absolute;
   font-size: 50px;
-  color: #e75a7c;
   top: 100px;
   left: 0;
   right: 0;
   margin: auto;
 }
+
 #instructionsarea {
   position: relative;
+  height: 150px;
+  width: 500;
+  text-align: center;
+}
+.instructionsareaBlack{
   background-color: black;
+  height: 150px;
+  width: 500;
+}
+.instructionsareaWhite{
+  position: relative;
+  background-color: white;
   height: 150px;
   width: 500;
   text-align: center;
@@ -32,12 +56,18 @@ body {
 #instructionsarea > span {
   position: absolute;
   font-size: 26px;
-  color: white;
   top: 50px;
   left: 0;
   right: 0;
   margin: auto;
 }
+.instructionsareMesageOn {
+  color: white;
+}
+.instructionsareMesageOff {
+  color: black;
+}
+
 button {
   padding: 5px 20px;
   border-radius: 5px;
@@ -46,3 +76,10 @@ button {
   background-color: #d6dbd2;
   border-style: none;
 }  
+
+.face {
+  color: black;
+}
+.back {
+  color: white;
+}
