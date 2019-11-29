@@ -1,7 +1,7 @@
 'use srict';
 
-const firstItem = '🐙';
-const secondItem = '🦑';
+const firstItem = '🐶';
+const secondItem = '🐱';
 
 document.getElementById('meseage1').innerText = `${firstItem}${secondItem}並び替えゲーム`;
 document.getElementById('meseage2').innerText = `配列の勉強がしたくて作りました。\n指示にしたがって${firstItem}と${secondItem}を並び替えて遊びましょう！`;
