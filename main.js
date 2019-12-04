@@ -69,46 +69,46 @@ window.onload = ()　=> {
   resultarea.textContent = blackOrWhite;
   instructionareaMessage.textContent = instruction[0];
 };
-selectButton1.onclick = () => {
+selectButton1.addEventListener ('click', () => {
  result = blackOrWhite.unshift(firstItem);
  resultarea.textContent = blackOrWhite;
  changeColor1();
-};
-selectButton2.onclick = () => {
+},false);
+selectButton2.addEventListener('click', () => {
   blackOrWhite.unshift(secondItem);
  resultarea.textContent = blackOrWhite;
  changeColor2();
-};
-selectButton3.onclick = () => {
+},false);
+selectButton3.addEventListener ('click', () => {
   blackOrWhite.push(firstItem);
  resultarea.textContent = blackOrWhite;
  changeColor1();
-};
-selectButton4.onclick = () => {
+},false);
+selectButton4.addEventListener ('click', () => {
   blackOrWhite.push(secondItem);
  resultarea.textContent = blackOrWhite;
  changeColor2();
-};
-selectButton5.onclick = () => {
+},false);
+selectButton5.addEventListener ('click', () => {
   blackOrWhite.shift();
  resultarea.textContent = blackOrWhite;
  changeColor1();
-};
-selectButton6.onclick = () => {
+},false);
+selectButton6.addEventListener ('click', () => {
   blackOrWhite.pop();
  resultarea.textContent = blackOrWhite;
  changeColor2();
-};
-selectButton7.onclick = () => {
+},false);
+selectButton7.addEventListener ('click', () => {
  blackOrWhite.reverse();
  resultarea.textContent = blackOrWhite;
  changeColor1();
-};
-resetButton.onclick = () => {
+},false);
+resetButton.addEventListener ('click',() => {
   location.reload();
-};
+},false);
 
-answerButton.onclick = () => {
+answerButton.addEventListener ('click', () => {
   answer = blackOrWhite.toString();
   if (count === 0 && answer === `${firstItem},${secondItem},${firstItem},${secondItem},${firstItem},${secondItem}`) {
     instructionareaMessage.textContent = "正解";
@@ -127,9 +127,9 @@ answerButton.onclick = () => {
   } else {
     return;
   }
-}
+},false);
 
-nextButton.onclick = () => {
+nextButton.addEventListener ('click', () => {
   if (count === 1) {
     resultarea.textContent = blackOrWhite;
     instructionareaMessage.textContent = instruction[1];
@@ -139,4 +139,4 @@ nextButton.onclick = () => {
   } else {
     return;
   }
-}
+},false);
